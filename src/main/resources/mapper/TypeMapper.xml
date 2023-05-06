@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.white.mapper.TypeMapper">
+
+    <resultMap id="BaseResultMap" type="com.white.domain.Type">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="typeName" column="type_name" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DOUBLE"/>
+            <result property="introduce" column="introduce" jdbcType="VARCHAR"/>
+            <result property="feature" column="feature" jdbcType="VARCHAR"/>
+            <result property="coverImage" column="cover_image" jdbcType="VARCHAR"/>
+            <result property="detailUrl" column="detail_url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,type_name,price,
+        introduce,feature,cover_image,
+        detail_url
+    </sql>
+</mapper>

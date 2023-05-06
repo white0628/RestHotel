@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.white.mapper.TOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.white.domain.Order">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="roomId" column="room_id" jdbcType="INTEGER"/>
+            <result property="inTime" column="in_time" jdbcType="TIMESTAMP"/>
+            <result property="leaveTime" column="leave_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="realPrice" column="real_price" jdbcType="DOUBLE"/>
+            <result property="realPeople" column="real_people" jdbcType="INTEGER"/>
+            <result property="fapiao" column="fapiao" jdbcType="INTEGER"/>
+            <result property="flag" column="flag" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,room_id,
+        in_time,leave_time,create_time,
+        real_price,real_people,fapiao,
+        flag
+    </sql>
+</mapper>
